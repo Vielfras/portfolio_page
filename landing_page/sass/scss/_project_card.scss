@@ -1,10 +1,12 @@
 $btn_color: #1AE0EC;
 
 .project_card {
+    display: flex;
+    flex-direction: column;
     box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.209);
     border-radius: 10px;
 
-    margin: 5%;
+    margin-bottom: 5%;
     padding-bottom: 5%;
 
     max-width: 340px;
@@ -13,10 +15,11 @@ $btn_color: #1AE0EC;
 
     text-align: center;
 
-    box-sizing: border-box;
+    height: min-content;
+
+    background-color: white;
 
     img {
-        height: 33.33%;
         width: 100%;
         margin-bottom: 20px;
         object-fit: cover;
@@ -27,10 +30,9 @@ $btn_color: #1AE0EC;
     div {
         display: flex;
         flex-direction: column;
-        align-content: center;
         align-items: center;
 
-        margin: 5%;
+        margin: 0;
 
         h1 {
             font: bolder normal 6vw Heebo;
@@ -61,4 +63,17 @@ $btn_color: #1AE0EC;
         }
     }
 
+    .project_skill_imgs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+
+
+        img {
+            height: 45px;
+            width: auto;
+            margin: 0;
+        }
+    }
 }

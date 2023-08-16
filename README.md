@@ -6,7 +6,8 @@ It's main purpose is to give a first taste of what a portfolio page is and the b
 
 Currently, there is no JS functionality or personal touches as this was an exercise for me to test my skill at implementing as close to a pixel perfect design as the one that was provided by the "client".
 
-I learned a lot by working on it. Mainly on the advantages and disadvanteages of Bootstrap and SASS, but also about the correct workflow of implementing a design that is not my own.
+I learned a lot by working on it. 
+Mainly on the advantages and disadvanteages of Bootstrap and SASS, but also about the correct workflow of implementing a design that is not my own.
 
 ## Client Designs:
 By order of implementation, 1st being the one I implenmented first:
