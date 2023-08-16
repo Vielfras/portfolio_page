@@ -1,0 +1,148 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 1000;
+  box-shadow: inset 0px 3px #1AE0EC;
+}
+nav .hamburger {
+  font-size: 15vw;
+  cursor: pointer;
+  color: #1AE0EC;
+}
+nav .self_portrait_small {
+  width: 10%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header .portfolio_explanation {
+  text-align: center;
+  background-color: #1AE0EC;
+}
+header .portfolio_explanation h1 {
+  font: bolder normal 15vw Heebo;
+  letter-spacing: 0px;
+  color: #3A3A3A;
+  padding-top: 20vw;
+}
+header .portfolio_explanation p {
+  font: normal normal 4vw Heebo;
+  letter-spacing: 0px;
+  color: #3A3A3A;
+}
+header .skill_imgs_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.209);
+}
+header .skill_imgs_container .skill_img {
+  width: 16.66%;
+  padding: 0;
+}
+
+h1 {
+  margin: 9vw;
+  font: bolder normal 8vw Heebo;
+  letter-spacing: 0px;
+}
+
+p {
+  margin: 7vw;
+  font: normal normal 4vw Heebo;
+}
+
+.about_me {
+  text-align: center;
+  margin-top: 25%;
+  margin-bottom: 25%;
+}
+.about_me img {
+  width: 40%;
+}
+.about_me button {
+  margin-top: 3vw;
+  padding: 10px 10px;
+  width: 60%;
+  border: none;
+  border-radius: 20px;
+  background-color: #1AE0EC;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.about_me button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #F6F6F6;
+}
+.projects .projects_explanation {
+  text-align: center;
+  margin-top: 15vw;
+}
+
+.project_card {
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.209);
+  border-radius: 10px;
+  margin: 5%;
+  padding-bottom: 5%;
+  max-width: 340px;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+}
+.project_card img {
+  height: 33.33%;
+  width: 100%;
+  margin-bottom: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  outline: none;
+}
+.project_card div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin: 5%;
+}
+.project_card div h1 {
+  font: bolder normal 6vw Heebo;
+  letter-spacing: 0px;
+}
+.project_card div p {
+  font: normal normal 4vw Heebo;
+}
+.project_card button {
+  padding: 10px 10px;
+  width: 60%;
+  border: none;
+  border-radius: 20px;
+  background-color: #1AE0EC;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.project_card button .extra-space {
+  margin-left: 5px;
+}
+.project_card button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+}/*# sourceMappingURL=main.css.map */

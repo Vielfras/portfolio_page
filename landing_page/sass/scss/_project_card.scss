@@ -1,0 +1,64 @@
+$btn_color: #1AE0EC;
+
+.project_card {
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.209);
+    border-radius: 10px;
+
+    margin: 5%;
+    padding-bottom: 5%;
+
+    max-width: 340px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    img {
+        height: 33.33%;
+        width: 100%;
+        margin-bottom: 20px;
+        object-fit: cover;
+
+        outline: none;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+
+        margin: 5%;
+
+        h1 {
+            font: bolder normal 6vw Heebo;
+            letter-spacing: 0px;
+        }
+
+        p {
+            font: normal normal 4vw Heebo;
+        }
+    }
+
+    button {
+        padding: 10px 10px;
+        width: 60%;
+        border: none;
+        border-radius: 20px;
+        background-color: $btn_color;
+        cursor: pointer;
+        transition: background-color 0.4s;
+
+        .extra-space {
+            margin-left: 5px;
+        }
+
+        &:hover {
+            background-color: #0056b3;
+            color: #ffff
+        }
+    }
+
+}

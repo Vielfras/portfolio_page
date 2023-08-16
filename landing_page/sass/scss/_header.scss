@@ -1,0 +1,32 @@
+header {
+    .portfolio_explanation {
+        text-align: center;
+        background-color: #1AE0EC;
+
+        h1 {
+            font: bolder normal 15vw Heebo;
+            letter-spacing: 0px;
+            color: #3A3A3A;
+            padding-top: 20vw;
+        }
+
+        p {
+            font: normal normal 4vw Heebo;
+            letter-spacing: 0px;
+            color: #3A3A3A;
+        }
+    }
+
+    .skill_imgs_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.209);
+
+        .skill_img {
+            width: 16.66%;
+            padding: 0;
+        }
+    }
+}

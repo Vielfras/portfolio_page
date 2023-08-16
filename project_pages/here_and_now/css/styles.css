@@ -1,0 +1,101 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #281EFF, #2DFF8C);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container h1 {
+  font: 4em "Satisfy", cursive;
+  text-shadow: 0 0 36px rgba(0, 0, 0, 0.53);
+  margin-bottom: 20px;
+}
+@media (min-width: 600px) {
+  .container h1 {
+    font-size: 6em;
+  }
+}
+@media (min-width: 1201px) {
+  .container h1 {
+    font-size: 12em;
+  }
+}
+.container p:nth-child(2) {
+  font-size: 2em;
+  font-family: "Varela Round", sans-serif;
+  color: #FFFFFF;
+}
+@media (max-width: 370px) {
+  .container p:nth-child(2) {
+    font-size: 1.3em;
+  }
+}
+.container p:nth-child(3) {
+  font-size: 1em;
+  font-family: "Varela Round", sans-serif;
+  color: #F9F9F9;
+  margin-bottom: 20px;
+}
+.container form {
+  display: flex;
+  align-items: center;
+}
+.container form .input-group {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Varela Round", sans-serif;
+}
+.container form .input-group label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+.container form .input-group input {
+  font: bold 1em "Varela Round", sans-serif;
+  color: #F9F9F9;
+  height: 40px;
+  background: rgba(246, 246, 246, 0.1411764706);
+  border: 2px solid #FFFFFF;
+}
+.container form button {
+  width: 30%;
+  height: 40px;
+  background: #FFFFFF;
+  font-family: "Varela Round", sans-serif;
+  border: 0;
+  color: #1C1C1C;
+  transition: all 0.3s ease;
+}
+.container form button:hover {
+  background-color: #f2f2f2;
+  color: #363636;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 370px) {
+  .container form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container form .input-group,
+  .container form button {
+    width: 90%;
+  }
+}/*# sourceMappingURL=styles.css.map */
