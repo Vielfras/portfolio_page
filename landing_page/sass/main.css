@@ -1,3 +1,8 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -25,7 +30,7 @@ nav .self_portrait_small {
 
 header .portfolio_explanation {
   text-align: center;
-  background-color: #1AE0EC;
+  background-color: rgba(19, 232, 241, 0.3882352941);
 }
 header .portfolio_explanation h1 {
   font: bolder normal 15vw Heebo;
@@ -92,6 +97,9 @@ p {
 .projects .projects_explanation {
   text-align: center;
   margin-top: 15vw;
+}
+.projects .project_card:last-child {
+  margin-bottom: 30%;
 }
 
 .project_card {
@@ -189,7 +197,9 @@ p {
 }
 .get_in_touch_container button {
   margin-left: 7%;
-  padding: 10px 10px;
+  margin-top: 3%;
+  margin-bottom: 20%;
+  padding: 5px 0px;
   width: 25%;
   border: none;
   border-radius: 20px;
@@ -204,19 +214,26 @@ p {
   background-color: #0056b3;
   color: white;
 }
-.get_in_touch_container .contact_info {
+
+.contact_info {
   background-color: #1AE0EC;
+}
+.contact_info .contact_grid {
   color: #2C2C2C;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.get_in_touch_container .contact_info div {
-  margin: 10%;
-  width: 100%;
+.contact_info .contact_grid .contact_info_cell {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
-.get_in_touch_container .contact_info div img {
-  -o-object-position: center;
-     object-position: center;
+.contact_info .contact_grid .contact_info_cell img {
+  align-self: center;
+}
+.contact_info .contact_grid .contact_info_cell p {
+  text-align: center;
+  font: normal normal 70% Helvetica Neue;
 }
 
 footer {
@@ -227,8 +244,9 @@ footer {
   background-color: #000000;
   color: #1AE0EC;
 }
-
-body {
-  padding: 0px;
-  margin: 0px;
+footer p {
+  height: 10%;
+  margin: 2%;
+  font: normal normal 300 55% Heebo;
+  letter-spacing: 0px;
 }/*# sourceMappingURL=main.css.map */

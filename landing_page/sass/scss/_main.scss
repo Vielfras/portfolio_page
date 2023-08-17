@@ -48,4 +48,11 @@ p {
         text-align: center;
         margin-top: 15vw;
     }
+
+    .project_card {
+
+        &:last-child {
+            margin-bottom: 30%;
+        }
+    }
 }
