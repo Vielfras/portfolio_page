@@ -1,0 +1,45 @@
+
+@import './project_card';
+
+#projects {
+    #web_dev_projects {
+        display: flex;
+        column-gap: 2vh;
+        justify-content: center;
+        align-items: center;
+    
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    #other_projects {
+        background-color: $primary_dark_mode;
+
+        display: flex;
+        column-gap: 2vh;
+        justify-content: center;
+        align-items: center;
+    
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #web_dev_projects {
+        flex-direction: column;
+        
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+
+    #other_projects {
+        flex-direction: column;
+        
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+
+
+

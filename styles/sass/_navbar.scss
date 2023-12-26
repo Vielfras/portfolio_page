@@ -1,0 +1,124 @@
+nav {
+    height: $navbar_height;
+    background-color: $primary_light_mode;
+    color: white;
+
+    @media only screen and (max-width: 730px) {
+        height: calc(0.8 * $navbar_height);
+    }
+
+    @include darkMode {
+        background-color: $primary_dark_mode;
+    }
+
+    #navbar_container {
+        padding-left: 20%;
+        width: 60vw;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: 730px) {
+            padding-left: 3vw;
+            width: 90vw;
+        }
+
+        li {
+            text-indent: 0;
+            list-style-type: none;
+            display: inline-block;
+        }
+
+        #nav_logo {
+            #logo {
+                height: calc(0.8 * $navbar_height);
+                width: calc(0.8 * $navbar_height);
+                border-radius: 50%;
+
+                @media only screen and (max-width: 730px) {
+                    height: calc(0.5 * $navbar_height);
+                    width: calc(0.5 * $navbar_height);
+                }
+            }
+        }
+
+        #hamburger {
+            display: none;
+
+            @media only screen and (max-width: 730px) {
+                display: block;
+
+                i.fas.fa-bars {
+                    font-size: 2em;
+                }
+            }
+        }
+
+        #nav_menu {
+            font-family: system-ui;
+            font-size: larger;
+            font-weight: 100;
+
+            li {
+                padding-left: 10px;
+                transition: all .25s;
+
+                &:hover {
+                    color: #818181;
+                }
+            }
+        }
+
+        #nav_social_container {
+            #nav_social {
+                display: flex;
+                justify-content: space-evenly;
+
+                li {
+                    padding: 0 10px;
+
+                    i {
+                        color: white;
+                        font-size: 1.2em;
+                    }
+                }
+            }
+
+            @media only screen and (min-width: 730px) {
+                display: none;
+            }
+        }
+
+        #nav_choices {
+            display: flex;
+            flex-direction: column;
+
+            @media only screen and (max-width: 730px) {
+                position: absolute;
+                top: calc(0.8 * $navbar_height);
+                left: 0;
+                width: 100%;
+                background-color: $primary_dark_mode;
+
+                font-size: 1.3em;
+
+                #nav_menu,
+                #nav_social {
+                    li {
+                        display: block;
+                        padding: 1vh;
+                        text-align: center;
+                    }
+                }
+                
+                #nav_social {
+                    background-color: #141414;
+                }
+            }
+
+
+        }
+    }
+}

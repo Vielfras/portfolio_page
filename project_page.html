@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="module" src="./scripts/social_floater/social_floater.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul id="navbar_container">
+            <li id="nav_logo"><img id="logo" src="./assests/eo_logo.png" alt=""></li>
+            <li id="hamburger">
+                <i class="fas fa-bars"></i>
+            </li>
+            <div class="" id="nav_choices">
+                <li id="nav_menu" class="menu hide">
+                    <ul>
+                        <li>about</li>
+                        <!-- <li>portfolio</li> -->
+                        <!-- <li>contact</li> -->
+                        <li>thoughts</li>
+                    </ul>
+                <li class="hide menu" id="nav_social_container">
+                    <ul id="nav_social">
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/in/eli-oksman-0a645a161/"
+                                title="Connect with me on LinkedIn" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                                <span class="sr-only"> LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="github">
+                            <a href="https://www.github.com/YourGitHubUsername" title="Collaborate with me on GitHub"
+                                target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span class="sr-only">GitHub</span>
+                            </a>
+                        </li>
+                        <li class="email">
+                            <a href="mailto:youremail@example.com" title="Connect with me through Email"
+                                target="_blank">
+                                <i class="fas fa-envelope"></i>
+                                <span class="sr-only">Email</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+        </ul>
+    </nav>
+
+    <social-links-floater position="left" background-color="#1f1f1f" svg-color="#ffffff"
+        linkedin-link="https://www.linkedin.com/in/eli-oksman-0a645a161/" github-link="https://www.github.com/Vielfras"
+        email-link="vielfras@gmail.com">
+    </social-links-floater>
+
+    <main>
+        <section id="project_preview">
+            <div id="preview">
+                <iframe src="../../web_dev_experiments/games/mvp_turn_based_combat/index.html" width="100%"
+                    height="500px"></iframe>
+                <button>Go To Page</button>
+            </div>
+        </section>
+        <section id="project_details">
+            <div id="project_intro">
+                <h1>Project Name</h1>
+                <h4>HTML - CSS - JS</h4>
+                <p>Describe the project here...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>2023 <span id="space">&nbsp;</span> Eli Oksman</p>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;600&display=swap');
+
+$transition-time: 1s;
+$card-size: 300px;
+$card-color: #0b0f08;
+$cover-border: 5px solid rgba(255, 255, 255, 0.5);
+$cover-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+$text-color: white;
+$hover-background: white;
+$hover-text-color: #0b0f08;
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #212121;
+}
+
+.card {
+  position: relative;
+  height: $card-size;
+  width: $card-size;
+  margin: 10px 0;
+  transition: ease all $transition-time;
+  perspective: 1200px;
+
+  &:hover .cover {
+    transform: rotateX(0deg) rotateY(-180deg);
+
+    h1 { transform: translateZ(100px); }
+    .technologies { transform: translateZ(60px); }
+    a { transform: translateZ(-60px) rotateY(-180deg); }
+  }
+
+  .cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: ease all $transition-time;
+    background: url('https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=600&q=80') no-repeat center center / cover;
+
+    &:before {
+      content: '';
+      position: absolute;
+      border: $cover-border;
+      box-shadow: $cover-shadow;
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2;
+      transition: ease all $transition-time;
+      transform-style: preserve-3d;
+      transform: translateZ(0px);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.4);
+      transition: ease all $transition-time;
+    }
+
+    h1, .technologies {
+      position: absolute;
+      color: $text-color;
+      transform-style: preserve-3d;
+      transition: ease all $transition-time;
+      z-index: 3;
+      font-size: 2em;
+      transform: translateZ(0px);
+    }
+
+    h1 {
+      font-weight: 600;
+      bottom: 25px;
+      left: 50px;
+    }
+
+    .technologies {
+      font-weight: 200;
+      top: 35px;
+      right: 50px;
+    }
+  }
+
+  .card-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: $card-color;
+    transform-style: preserve-3d;
+    transition: ease all $transition-time;
+    transform: translateZ(-1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      transform-style: preserve-3d;
+      transition: ease transform $transition-time, ease background 0.5s;
+      transform: translateZ(-1px) rotateY(-180deg);
+      background: transparent;
+      border: 1px solid $text-color;
+      font-weight: 200;
+      font-size: 1.2em;
+      color: $text-color;
+      padding: 11px 20px;
+      outline: none;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $hover-background;
+        color: $hover-text-color;
+      }
+    }
+  }
+}

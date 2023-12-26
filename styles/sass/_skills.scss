@@ -1,0 +1,88 @@
+@import "skill_card";
+
+#skills {
+    width: 100%;
+    padding-bottom: 3vh;
+    background-color: $primary_dark_mode;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 25dvh);
+        grid-gap: 5dvw;
+        position: relative;
+        z-index: 1;
+    }
+
+    #skills_display {
+        --background-color: #18181B;
+        --text-color: #b2b2bb;
+
+        --card-background-color: #ffffff00;
+        --card-border-color: rgba(255, 255, 255, 0.1);
+        --card-box-shadow-1: rgba(0, 0, 0, 0.05);
+        --card-box-shadow-1-y: 3px;
+        --card-box-shadow-1-blur: 6px;
+        --card-box-shadow-2: rgba(0, 0, 0, 0.1);
+        --card-box-shadow-2-y: 8px;
+        --card-box-shadow-2-blur: 15px;
+        --card-label-color: #FFFFFF;
+        --card-shine-opacity: .1;
+        --card-shine-gradient: conic-gradient(from 205deg at 50% 50%, rgba(16, 185, 129, 0) 0deg, #10B981 25deg, rgba(52, 211, 153, 0.18) 295deg, rgba(16, 185, 129, 0) 360deg);
+        --card-line-color: #2A2B2C;
+        --card-tile-color: rgba(16, 185, 129, 0.05);
+
+        --card-hover-border-color: rgba(255, 255, 255, 0.2);
+        --card-hover-box-shadow-1: rgba(0, 0, 0, 0.04);
+        --card-hover-box-shadow-1-y: 5px;
+        --card-hover-box-shadow-1-blur: 10px;
+        --card-hover-box-shadow-2: rgba(0, 0, 0, 0.3);
+        --card-hover-box-shadow-2-y: 15px;
+        --card-hover-box-shadow-2-blur: 25px;
+        --card-hover-icon-color: #34D399;
+
+
+        padding-top: 3dvh;
+    }
+
+    @media only screen and (max-width: 850px) {
+        .grid {
+            grid-template-columns: repeat(3, 24dvh);
+            grid-gap: 2dvw;
+        }
+
+    }
+
+    @media only screen and (max-width: 730px) {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(1, 30dvh);
+            grid-template-areas:
+                "cell_2nd"
+                "cell_1st"
+                "cell_3rd";
+            grid-gap: 3dvw;
+            position: relative;
+            z-index: 1;
+
+            .cell_1st {
+                grid-area: cell_1st;
+            }
+
+            .cell_2nd {
+                grid-area: cell_2nd;
+            }
+
+            .cell_3rd {
+                grid-area: cell_3rd;
+            }
+        }
+
+    }
+}

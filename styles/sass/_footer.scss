@@ -1,0 +1,29 @@
+footer {
+    width: 100%;
+    height: $footer_height;
+
+    background-color: $primary_dark_mode;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    hr {
+        width: 50%;
+    }
+
+    /* Gradient transparent - color - transparent */
+
+    hr {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, $primary_dark_mode, rgba(255, 255, 255, 0.75), $primary_dark_mode);
+    }
+
+    p {
+        display: inline;
+    }
+}

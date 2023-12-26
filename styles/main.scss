@@ -1,0 +1,69 @@
+$darkMode: true;
+
+@mixin darkMode {
+    @if($darkMode) {
+        @media(prefers-color-scheme: dark) {
+            @content;
+        }
+    }
+}
+
+$primary_light_mode: #ffffff;
+$secondary_light_mode: #d3d3d3;
+
+$primary_dark_mode: #1f1f1f;
+$secondary_dark_mode: #4b4b4b;
+
+$navbar_height: 10vh;
+$footer_height: 10vh;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background-color: transparent;
+
+    font-family: system-ui;
+    font-size: medium;
+    border: none;
+    border-top: 1px groove #919191;
+    border-bottom: 1px inset #919191;
+    border-radius: 10px;
+
+    padding: 10px;
+}
+
+
+@import './sass/navbar';
+@import './sass/about_me';
+@import './sass/skills';
+@import './sass/projects';
+@import './sass/contact_me';
+@import './sass/footer';
+
+@import './sass/project_page';
+
+
+.hide {
+    display: none !important;
+}
+
+
+.sr_only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.top_padding {
+    padding-top: calc(2.9 * $navbar_height) !important;
+}
