@@ -25,6 +25,7 @@ class SocialLinks extends HTMLElement {
         const baseWidth = this.getAttribute('base-width') || '1.7vh';
         const hoverWidth = this.getAttribute('hover-width') || '5vh';
         const svgColor = this.getAttribute('svg-color') || 'black';
+        const svgHoverColor = this.getAttribute('svg-color-hover') || 'blue';
 
         const style = document.createElement('style');
         style.textContent = `
@@ -66,8 +67,11 @@ class SocialLinks extends HTMLElement {
             a:last-child {
                 padding-bottom: 0.3vh;
             }
+            a:hover svg {
+                fill: ${svgHoverColor};
+            }
             a.inactive-link {
-                pointer-events: none; /* Initially disable link activation */
+                pointer-events: none;
             }
             
             svg {
@@ -79,9 +83,11 @@ class SocialLinks extends HTMLElement {
             :host(:hover) {
                 width: ${hoverWidth};
             }
+
             :host(:hover) svg {
                 opacity: 100%;
             }
+
         `;
         this.shadowRoot.appendChild(style);
 
