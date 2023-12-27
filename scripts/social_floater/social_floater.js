@@ -42,6 +42,8 @@ class SocialLinks extends HTMLElement {
                 width: ${baseWidth};
                 overflow: hidden;
                 background-color: ${backgroundColor};
+
+                z-index: 9999;
             }
             
             :host([position='right']) {
