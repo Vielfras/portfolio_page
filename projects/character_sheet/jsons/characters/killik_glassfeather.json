@@ -1,0 +1,73 @@
+{
+    "name": "Killik Glassfeather",
+    "characterCondition": {
+        "maxHealth": 10,
+        "currHealth": 10,
+        "maxMana": 5,
+        "currMana": 5,
+        "physicalCondition": "N",
+        "movement": 30
+    },
+    "attributesMap": {
+        "Appearance": 12,
+        "Brain": 14,
+        "Constitution": 13,
+        "Magic": 4,
+        "Muscles": 15,
+        "Nerves": 20,
+        "Senses": 20,
+        "Will": 12,
+        "Luck": 0
+    },
+    "defensiveEquipment": {
+        "Forest Cloak": {
+            "AR": 2,
+            "Penalty": {},
+            "Bonuses": {
+                "Stealth": 2
+            }
+        },
+        "Soft Leather Boots": {
+            "AR": 3,
+            "Penalty": {},
+            "Bonuses": {
+                "Stealth": 2
+            }
+        },
+        "Lightweight Armor": {
+            "AR": 5,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Wrist Gaurd": {
+            "AR": 1,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Neck Scarf": {
+            "AR": 1,
+            "Penalty": {},
+            "Bonuses": {
+                "Will": 1
+            }
+        },
+        "Scout's Pouch": {
+            "AR": 0,
+            "Penalty": {},
+            "Bonuses": {
+                "Survival": 2
+            }
+        }
+    },
+    "skillList" : [
+        "Basic Cooking",
+        "Basic Foraging",
+        "Basic Snare Mastery",
+        "Eagle Eye",
+        "Echoing Shot",
+        "Quick Draw",
+        "Silent Step",
+        "Trail Reading",
+        "Animal Lore"
+    ]
+}

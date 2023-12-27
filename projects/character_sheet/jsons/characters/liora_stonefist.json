@@ -1,0 +1,89 @@
+{
+    "name": "Liora Stonefist",
+    "characterCondition": {
+        "maxHealth": 10,
+        "currHealth": 10,
+        "maxMana": 5,
+        "currMana": 5,
+        "physicalCondition": "N",
+        "movement": 30
+    },
+    "attributesMap": {
+        "Appearance": 12,
+        "Brain": 9,
+        "Constitution": 19,
+        "Magic": 4,
+        "Muscles": 22,
+        "Nerves": 14,
+        "Senses": 14,
+        "Will": 16,
+        "Luck": 1
+    },
+    "defensiveEquipment": {
+        "Leather Cuirass": {
+            "AR": 5,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Basic Leather Armor": {
+            "AR": 5,
+            "Penalty": {},
+            "Bonuses": {}
+
+        },
+        "Metal Shoulder Guard (Right)": {
+            "AR": 3,
+            "Penalty": {
+                "Acrobatics": -5
+            },
+            "Bonuses": {}
+
+        },
+        "Chainmail Sleeve(Right)": {
+            "AR": 2,
+            "Penalty": {},
+            "Bonuses": {}
+
+        },
+        "Leather Gloves": {
+            "AR": 2,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Utility Belt": {
+            "AR": 0,
+            "Penalty": {},
+            "Bonuses": {
+                "Brain": 1
+            }
+        },
+        "Metal Shins": {
+            "AR": 5,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Boots": {
+            "AR": 2,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Wooden Shield": {
+            "AR": 10,
+            "Penalty": {},
+            "Bonuses": {}
+        }
+    },
+    "skillList" : [
+        "Basic Cooking",
+        "Basic Crafting",
+        "Basic Footwork",
+        "Basic Strength",
+        "Grapple",
+        "Keen Eyesight",
+        "Parry",
+        "Power Punch",
+        "Quick Slash",
+        "Rapid Waking",
+        "Shield Bash"
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "defensiveEquipment": {
+        "Leather Cuirass": {
+            "AR": 5,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Basic Leather Armor": {
+            "AR": 5,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Metal Shoulder Guard (Right)": {
+            "AR": 3,
+            "Penalty": {
+                "Acrobatics": -5
+            },
+            "Bonuses": {}
+        },
+        "Chainmail Sleeve(Right)": {
+            "AR": 2,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Leather Gloves": {
+            "AR": 2,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Utility Belt": {
+            "AR": 0,
+            "Penalty": {},
+            "Bonuses": {
+                "Brain": 1
+            }
+        },
+        "Metal Shins": {
+            "AR": 5,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Boots": {
+            "AR": 2,
+            "Penalty": {},
+            "Bonuses": {}
+        },
+        "Wooden Shield": {
+            "AR": 10,
+            "Penalty": {},
+            "Bonuses": {}
+        }
+    }
+}

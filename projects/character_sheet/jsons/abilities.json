@@ -1,0 +1,116 @@
+{
+    "Acrobatics": {
+        "Muscles": 0.5,
+        "Nerves": 2,
+        "Will": 0.5
+    },
+    "AnimalHandling": {
+        "Brain": 1,
+        "Will": 1
+    },
+    "Arcana": {
+        "Brain": 0.5,
+        "Magic": 1.5,
+        "Will": 1
+    },
+    "Athletics": {
+        "Muscles": 1.5,
+        "Nerves": 0.5
+    },
+ 
+    "Balance": {
+        "Muscles": 0.5,
+        "Nerves": 1.5,
+        "Senses": 0.5
+    },
+    "Climbing": {
+        "Muscles": 1.2,
+        "Nerves": 0.8
+    },
+    "Crafting": {
+        "Brain": 1
+    },
+    "Deception": {
+        "Appearance": 1,
+        "Brain": 1
+    },
+    "Endurance": {
+        "Constitution": 2,
+        "Muscles": 0.5,
+        "Nerves": 0.5
+    },
+    "Grappling": {
+        "Brain": 0.5,
+        "Muscles": 1,
+        "Nerves": 1,
+        "Will": 1.5
+    },
+    "History": {
+        "Brain": 1
+    },
+    "Insight": {
+        "Brain": 1,
+        "Magic": 1,
+        "Senses": 1
+    },
+    "Intimidation": {
+        "Appearance": 1,
+        "Brain": 0.5,
+        "Muscles" : 2,
+        "Will": 0.5
+    },
+    "Investigation": {
+        "Brain": 1.5,
+        "Senses": 0.5
+    },
+    "Medicine": {
+        "Brain": 1
+    },
+    "Memory": {
+        "Brain": 1
+    },
+    "MentalResistance": {
+        "Brain": 0.5,
+        "Magic": 1,
+        "Will": 1.5
+    },
+    "Nature": {
+        "Brain": 1,
+        "Senses": 1.5,
+        "Magic" : 0.5
+    },
+    "Perception": {
+        "Brain": 0.5,
+        "Senses": 1.5
+    },
+    "Performance": {
+        "Appearance": 1.5,
+        "Brain": 1,
+        "Nerves": 0.5
+    },
+    "Persuasion": {
+        "Appearance": 1,
+        "Brain": 1.5,
+        "Will": 0.5
+    },
+    "Reflexes": {
+        "Muscles": 0.5,
+        "Nerves": 1.5
+    },
+    "SleightOfHand": {
+        "Appearance": 0.5,
+        "Brain": 1,
+        "Nerves": 1.5
+    },
+    "Stealth": {
+        "Appearance": 1,
+        "Brain": 0.5,
+        "Muscles": 0.5,
+        "Nerves": 2
+    },
+    "Survival": {
+        "Brain": 2.2,
+        "Constitution": 0.5,
+        "Will": 0.3
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "Goblin",
+    "characterCondition": {
+        "maxHealth": 5,
+        "currHealth": 5,
+        "maxMana": 1,
+        "currMana": 1,
+        "physicalCondition": "N",
+        "movement": 25
+    },
+    "attributesMap": {
+        "Appearance": 1,
+        "Brain": 2,
+        "Constitution": 6,
+        "Magic": 1,
+        "Muscles": 3,
+        "Nerves": 8,
+        "Senses": 12,
+        "Will": 5,
+        "Luck": 0
+    },
+    "defensiveEquipment": {
+        
+    },
+    "skillList" : 
+    {
+        
+    }
+}

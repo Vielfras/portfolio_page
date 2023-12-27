@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Sheet</title>
+    <link rel="stylesheet" href="styles/main.css"> <!-- Ensure this is the compiled CSS from SCSS -->
+</head>
+
+<body>
+    <div class="welcome-container">
+        <h1>Welcome to my TTRPG digital tools!</h1>
+        <label for="name-select">Please select a character:</label>
+        <input type="text" id="name-input" placeholder="Search for names...">
+        <select id="name-select">
+            <!-- Options will be added here -->
+        </select>
+        <button id="confirm-button">Confirm</button>
+    </div>
+
+    <main class="hidden">
+        <div class="character-sheet">
+            <header class="character-header">
+                <h2 class="character-name">Jon Doe</h2>
+            </header>
+            <div class="character-main-stats">
+                <div class="main-stats-item" id="health">
+                    <span class="label">Health</span>
+                    <div class="value-controls">
+                        <button class="decrement-button health">-</button>
+                        <span class="value"><span id="health-curr">[Value]</span><span> / </span><span
+                                id="health-max">[Value]</span></span>
+                        <button class="increment-button health">+</button>
+                    </div>
+                </div>
+                <div class="main-stats-item" id="mana">
+                    <span class="label">Mana</span>
+                    <div class="value-controls">
+                        <button class="decrement-button mana">-</button>
+                        <span class="value"><span id="mana-curr">[Value]</span><span> / </span><span
+                                id="mana-max">[Value]</span></span>
+                        <button class="increment-button mana">+</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="character-info">
+                <div class="info-item" id="physical-condition">
+                    <span class="label">Condition:</span>
+                    <span class="value">[Value]</span>
+                </div>
+                <div class="info-item" id="movement">
+                    <span class="label">Movement</span>
+                    <span class="value">[Value]</span>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="character-stats">
+                <div class="stats-item" id="accuracy">
+                    <span class="label">Acc</span>
+                    <span class="value">[Value]</span>
+                </div>
+                <div class="stats-item" id="evasiveness">
+                    <span class="label">EV</span>
+                    <span class="value">[Value]</span>
+                </div>
+                <div class="stats-item" id="defense-penetration">
+                    <span class="label">DP</span>
+                    <span class="value">[Value]</span>
+                </div>
+                <div class="stats-item" id="defense">
+                    <span class="label">Def</span>
+                    <span class="value"><span id="defense-base">[Value]</span><span> / </span><span
+                            id="defense-total">[Value]</span></span>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="collapsible" data-text="Attributes " data-collapsetarget="attributes-content"></div>
+            <div class="content" id="attributes-content">
+                <div class="attributes">
+                    <div class="attribute-grid">
+                        <!-- Attributes will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="collapsible" data-text="Abilities " data-collapsetarget="abilities-content"></div>
+            <div class="content" id="abilities-content">
+                <div class="character-abilities">
+                    <table class="abilities-table">
+                        <thead>
+                            <tr>
+                                <th>Ability</th>
+                                <th>Total</th>
+                                <th>Base</th>
+                            </tr>
+                        </thead>
+                        <tbody class="abilities-list">
+                            <!-- Abilities will be populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="collapsible" data-text="Active Skills " data-collapsetarget="active-skill-content"></div>
+            <div class="content" id="active-skill-content">
+                <div class="skills">
+                    <table class="active-skills-table">
+                        <thead>
+                            <tr>
+                                <th>Skill</th>
+                                <th>Effect</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody id="active-skill-list">
+                            <!-- Active skills will be populated here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="collapsible" data-text="Passive Skills " data-collapsetarget="passive-skill-content"></div>
+            <div class="content" id="passive-skill-content">
+                <div class="skills">
+                    <table class="passive-skills-table">
+                        <thead>
+                            <tr>
+                                <th>Skill</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody id="passive-skill-list">
+                            <!-- Passive skills  will be populated here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="collapsible" data-text="Gear " data-collapsetarget="gear-content"></div>
+            <div class="content" id="gear-content">
+                <div class="character-defensive-items">
+                    <table class="defensive-items-table">
+                        <thead>
+                            <tr>
+                                <th>Gear</th>
+                                <th>-</th>
+                                <th>+</th>
+                            </tr>
+                        </thead>
+                        <tbody id="gear-list">
+                            <!-- The gear will be populated here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr class="block_break">
+
+            <div class="collapsible" data-text="Defensive Equipment " data-collapsetarget="equipment-content"></div>
+            <div class="content" id="equipment-content">
+                <div class="character-defensive-items">
+                    <table class="defensive-items-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>AR</th>
+                                <th>-</th>
+                                <th>+</th>
+                            </tr>
+                        </thead>
+                        <tbody id="equipment-list">
+                            <!-- The defensive equipment will be populated here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr class="block_break">
+
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script type="module" src="scripts/main.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>

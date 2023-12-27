@@ -1,0 +1,76 @@
+{
+    "skills": [
+        {
+            "type": "Passive",
+            "name": "Basic Strength",
+            "effect": {
+                "Muscles": 5
+            }
+        },
+        {
+            "type": "Passive",
+            "name": "Basic Crafting",
+            "effect": {
+                "Crafting": 10
+            }
+        },
+        {
+            "type": "Passive",
+            "name": "Basic Cooking",
+            "effect": {
+                "Cooking": 10
+            }
+        },
+        {
+            "type": "Passive",
+            "name": "Basic Footwork",
+            "effect": {
+                "Balance": 10
+            }
+        },
+        {
+            "type": "Active",
+            "name": "Grapple",
+            "description": "Increases chance of successfully grappling an opponent.",
+            "effect": "+15 Grapple"
+        },
+        {
+            "type": "Active",
+            "name": "Power Punch",
+            "description": "Delivers a strong punch, potentially knocking back an opponent.",
+            "effect": "+10 Unarmed Strike Damage."
+        },
+        {
+            "type": "Passive",
+            "name": "Keen Eyesight",
+            "effect": {
+                "Perception": 10
+            }
+        },
+        {
+            "type": "Passive",
+            "name": "Rapid Waking",
+            "effect": {
+                "Reaction": "+5 to first roll after waking."
+            }
+        },
+        {
+            "type": "Active",
+            "name": "Parry",
+            "description": "The user holds themselves like a rock, deflecting incoming attacks.",
+            "effect": "+15 Defense when parrying."
+        },
+        {
+            "type": "Active",
+            "name": "Quick Slash",
+            "description": "Enables a swift and precise slash with a weapon.",
+            "effect": "+20 Accuracy for one attack."
+        },
+        {
+            "type": "Active",
+            "name": "Shield Bash",
+            "description": "Uses the shield as a weapon, delivering a powerful bash to stagger enemies.",
+            "effect": "+20 Accuracy & 1d4 damage. If DP is > 20 than Defense enemy is Stunned"
+        }
+    ]
+}
