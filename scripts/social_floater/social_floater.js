@@ -54,6 +54,7 @@ class SocialLinks extends HTMLElement {
                 border-radius: 0px 30px 30px 0px;
                 border-right: 1px solid #ffffff;
             }
+
             a {
                 display: block;
                 padding: 1vh;
@@ -63,11 +64,16 @@ class SocialLinks extends HTMLElement {
             a:last-child {
                 padding-bottom: 0.3vh;
             }
+            a.inactive-link {
+                pointer-events: none; /* Initially disable link activation */
+            }
+            
             svg {
                 transition: opacity 0.4s ease-in-out;
                 opacity: 0%;
                 fill: ${svgColor};
             }
+
             :host(:hover) {
                 width: ${hoverWidth};
             }
@@ -78,15 +84,24 @@ class SocialLinks extends HTMLElement {
         this.shadowRoot.appendChild(style);
 
         const container = document.createElement('div');
-        container.innerHTML = this.createLinkHTML(linkedinLink, linkedinSVG, "LinkedIn") +
-            this.createLinkHTML(githubLink, gitHubSVG, "GitHub") +
-            this.createLinkHTML(emailLink, emailSVG, "Email");
+        container.innerHTML = this.createLinkHTML(linkedinLink, linkedinSVG, "LinkedIn") 
+                            + this.createLinkHTML(githubLink, gitHubSVG, "GitHub") 
+                            + this.createLinkHTML(emailLink, emailSVG, "Email");
 
         this.shadowRoot.appendChild(container);
+
+        this.addEventListener('transitionend', this.enableLinks);
     }
 
     createLinkHTML(link, svg, label) {
-        return link ? `<a href="${link}" target="_blank" rel="noopener noreferrer" aria-label="${label}">${svg}</a>` : '';
+        return link ? `<a href="${link}" target="_blank" class="inactive-link" rel="noopener noreferrer" aria-label="${label}">${svg}</a>` : '';
+    };
+
+    enableLinks = () => {
+        const links = this.shadowRoot.querySelectorAll('a');
+        links.forEach(link => {
+            link.classList.remove('inactive-link');
+        });
     };
 }
 
