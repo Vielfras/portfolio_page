@@ -4,12 +4,12 @@ export {
     GetProjectPageMainElement,
 };
 
-const GetProjectPageMainElement = (projectName) => {
+const GetProjectPageMainElement = (projectPath, projectDescriptionMDfilePath) => {
     const iFrameHTML = `
             <section id="project_preview">
                 <div id="preview">
-                    <iframe src="../../web_dev_experiments/games/mvp_turn_based_combat/index.html" width="100%" height="500px"></iframe>
-                    <a href="http://127.0.0.1:5500/projects/portfolio/index.html#" target="_blank"><button>Go To Page</button></a>
+                    <iframe src="${projectPath}" width="100%" height="500px"></iframe>
+                    <a href="../index.html#" target="_blank" rel="noopener noreferrer"><button>Go To Page</button></a>
                 </div>
             </section>
     `;

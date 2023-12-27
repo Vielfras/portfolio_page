@@ -11,18 +11,18 @@ const HandleProjectPageLinkClick = (linkId) => {
     console.log("Link with ID", linkId, "was clicked.");
 
     const newMainElement = GetProjectPageMainElement(linkId);
-
+    
     const headerElement = document.querySelector('header');
     const mainElement = document.querySelector('main');
     const skillsElement = document.querySelector('#skills');
-
+    const contactMeElement = document.querySelector('#contact_me');
+    
     if (headerElement) headerElement.remove();
     if (mainElement) mainElement.remove();
     if (skillsElement) skillsElement.remove();
-
-    const contactMeSection = document.querySelector('#contact_me');
-    if (contactMeSection) {
-        contactMeSection.parentNode.insertBefore(newMainElement, contactMeSection);
+    
+    if (contactMeElement) {
+        contactMeElement.parentNode.insertBefore(newMainElement, contactMeElement);
     } else {
         document.body.appendChild(newMainElement);
     }
@@ -32,9 +32,9 @@ const HandleProjectPageLinkClick = (linkId) => {
 
 
 const projectPaths = {
-    "israquarium" :"../projects/turn_based_combat.md",
-    "ttrpgTools" :"../projects/turn_based_combat.md",
-    "xianxiaMvp" :"../projects/turn_based_combat.md",
+    "israquarium" :"",
+    "ttrpgTools" :"../projects/character_sheet/index.html",
+    "xianxiaMvp" :"",
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll(".project_page_link").forEach((element) => {
         element.addEventListener('click', (event) => {
-            HandleProjectPageLinkClick(event, projectPaths[element.id]);
+            HandleProjectPageLinkClick(projectPaths[element.id]);
         });
     });
 });
