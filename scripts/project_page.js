@@ -9,7 +9,7 @@ const GetProjectPageMainElement = (projectPath, projectDescriptionMDfilePath) =>
             <section id="project_preview">
                 <div id="preview">
                     <iframe src="${projectPath}" width="100%" height="500px"></iframe>
-                    <a href="../index.html#" target="_blank" rel="noopener noreferrer"><button>Go To Page</button></a>
+                    <a href="${projectPath}" target="_blank" rel="noopener noreferrer"><button>Go To Page</button></a>
                 </div>
             </section>
     `;
