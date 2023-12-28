@@ -8,7 +8,7 @@ const CreateNavBar = () => {
     const newNavBarEle =
         `<nav class="bg-white border-gray-200 dark:bg-gray-900 border-b-2 border-sky-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="../../../../../projects/portfolio/index.html" class="flex items-center">
+            <a href="https://oksman.netlify.app" target="_blank" class="flex items-center">
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Oksman</span>
             </a>
             <div class="flex items-center md:order-2">
