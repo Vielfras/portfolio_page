@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+}
+
+.note {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px #4c7c76bf;
+    position: relative;
+
+    /* height: 100%;
+    display: flex;
+    flex-direction: column; */
+}
+
+.menu-container {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    padding: 3px;
+    z-index: 2;
+}
+
+.markdown_view_toggle_btn {
+    width: 30px;
+    height: 30px;
+    transform: translateY(5px);
+    background-color: transparent;
+    color: #9fe3dd;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #9fe3dd;
+    transform: rotate(45deg);
+}
+
+.note-header {
+    padding: 10px;
+    animation: borderAnimation 0.3s ease-in, colorAnimation 0.2s ease-in;
+    background-color: #2a4743;
+    border-bottom: 1px solid #4c7c76;
+    box-shadow: inset 0px 1px 10px -5px #9fe3dda1;
+    border-radius: 10px 0px;
+}
+
+@keyframes borderAnimation {
+    from {
+        border-radius: 0px;
+    }
+
+    to {
+        border-radius: 10px 0px;
+    }
+}
+
+@keyframes colorAnimation {
+    from {
+        background-color: #333;
+    }
+
+    to {
+        background-color: #2a4743;
+    }
+}
+
+
+/* ====================    NOTE TEXT CONTENT   ====================  */
+.note-content textarea {
+    width: 95%;
+    height: auto;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    resize: none;
+}
+
+
+/* ====================    Parsed Markdown Visualisation    ====================  */
+.wysiwyg {
+    width: 95%;
+    height: 85%;
+    margin: 8px;
+    outline: none;
+    padding: 0px;
+    color: #ddd;
+    overflow-wrap: break-word;
+
+    p img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+    }
+    a, a:hover, a:active, a:visited {
+        color: #37b8a9;
+        text-decoration: none;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 10px 0;
+        border: 1px solid #9fe3dd56;
+        border-radius: 10px;
+        overflow: hidden;
+
+        th,
+        td {
+            border: 1px solid rgba(159, 227, 221, 0.097);
+            padding: 8px 12px;
+            color: #ddd;
+        }
+
+        th {
+            background-color: #2a4743;
+            color: #ddd;
+            border-color: #dddddd35;
+        }
+
+        tr:nth-child(even) {
+            background-color: #333;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #232323;
+        }
+    }
+}
+
+
+
+
+.hide {
+    display: none;
+}
+
+.flip {
+    animation: rotate 0.2s ease-in;
+    width: 15px;
+    transform: rotate(45deg);
+}
+
+@keyframes rotate {
+    from {
+        width: 5px;
+        transform: rotate(0deg);
+    }
+
+    to {
+        width: 15px;
+        transform: rotate(45deg);
+    }
+}
+
+.meta-data {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: #777;
+}
+
+.date-line,
+.tags-line {
+    font-weight: bold;
+    font-size: larger;
+    line-height: 1.5;
+    color: #ddd;
+}

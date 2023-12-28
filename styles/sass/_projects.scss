@@ -2,7 +2,7 @@
 @import './project_card';
 
 #projects {
-    #web_dev_projects {
+    #web_dev_projects, #other_projects {
         display: flex;
         column-gap: 2vh;
         justify-content: center;
@@ -14,14 +14,6 @@
 
     #other_projects {
         background-color: $primary_dark_mode;
-
-        display: flex;
-        column-gap: 2vh;
-        justify-content: center;
-        align-items: center;
-    
-        padding-top: 3vh;
-        padding-bottom: 3vh;
     }
 }
 

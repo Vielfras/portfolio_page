@@ -9,7 +9,7 @@ const portfolioPageUrl = "https://oksman.netlify.app";
 const urlManager = new URLManager();
 
 const projectPaths = {
-    "israquarium" :"",
+    "d_commerce" :"../projects/d_commerce/index.html",
     "ttrpgTools" :"../projects/character_sheet/index.html",
     "xianxiaMvp" :"",
 };

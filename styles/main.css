@@ -678,7 +678,7 @@ nav #navbar_container #nav_choices {
     max-width: 400px;
   }
 }
-#projects #web_dev_projects {
+#projects #web_dev_projects, #projects #other_projects {
   display: flex;
   -moz-column-gap: 2vh;
        column-gap: 2vh;
@@ -689,13 +689,6 @@ nav #navbar_container #nav_choices {
 }
 #projects #other_projects {
   background-color: #1f1f1f;
-  display: flex;
-  -moz-column-gap: 2vh;
-       column-gap: 2vh;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
 }
 
 @media only screen and (max-width: 850px) {
