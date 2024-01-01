@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700&family=Roboto:ital,wght@0,300;0,400;0,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Raleway:wght@200&display=swap');
 
-#project_preview {
+.project_preview {
     background-color: $primary_dark_mode;
 
-    #preview {
+    .preview {
         width: 80%;
         margin: 0 auto;
         padding: 1rem 0 2rem;
@@ -25,19 +25,26 @@
             }
         }
 
-        button {
-            color: white;
+        .project_links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 2rem;
 
-            &:hover {
-                color: black;
-                background-color: white;
-                transition: 0.8s;
+            button {
+                color: white;
+
+                &:hover {
+                    color: black;
+                    background-color: white;
+                    transition: 0.8s;
+                }
             }
         }
     }
 }
 
-#project_details {
+.project_details {
     width: 100%;
     padding: 5vh 0 2vh;
     display: flex;
@@ -45,8 +52,8 @@
     justify-content: center;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-    
-    #project_intro {
+
+    .project_intro {
         width: 80%;
         max-width: 60rem;
         padding: 5vh 5vw;

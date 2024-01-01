@@ -4,20 +4,39 @@ export {
     GetProjectPageMainElement,
 };
 
-const GetProjectPageMainElement = async (projectPath) => {
-    const iFrameHTML = `
-            <section id="project_preview">
-                <div id="preview">
-                    <iframe src="${projectPath}/index.html" width="100%" height="500px"></iframe>
-                    <a href="${projectPath}/index.html" target="_blank" rel="noopener noreferrer"><button>Go To Page</button></a>
+const projectPath = "projectPath";
+const gitHub = "gitHub";
+
+const GetProjectPageMainElement = async (project) => {
+    const iFrameHTML = project[gitHub] !== "None" ?
+    `
+            <section class="project_preview">
+                <div class="preview">
+                    <iframe src="${project[projectPath]}/index.html" width="100%" height="500px"></iframe>
+                    <div class="project_links">
+                        <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
+                        <a href="${project[gitHub]}/index.html" target="_blank" rel="noopener noreferrer"><button>GitHub</button></a>
+                    </div>
                 </div>
             </section>
-    `;
+    `
+    :
+    `
+            <section class="project_preview">
+                <div class="preview">
+                    <iframe src="${project[projectPath]}/index.html" width="100%" height="500px"></iframe>
+                    <div class="project_links">
+                        <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
+                    </div>
+                </div>
+            </section>
+    `
+    ;
 
-    const readmeMD = await FetchText(`${projectPath}/README.md`)
+    const readmeMD = await FetchText(`${project[projectPath]}/README.md`)
     const projectDescriptionHTML = `
-            <section id="project_details">
-                <div id="project_intro">
+            <section class="project_details">
+                <div class="project_intro">
                     ${marked.parse(readmeMD)}
                 </div>
             </section>

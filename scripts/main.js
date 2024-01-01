@@ -8,11 +8,11 @@ const portfolioPageUrl = "http://127.0.0.1:5500/";
 
 const urlManager = new URLManager();
 
-const projectPaths = {
-    "d_commerce" :"../projects/d_commerce",
-    "evernote" :"../projects/evernote",
-    "ttrpgTools" :"../projects/character_sheet",
-    "xianxiaMvp" :"../projects/xianxia_mvp",
+const projects = {
+    "d_commerce" : {projectPath: "../projects/d_commerce", gitHub: "None"},
+    "evernote" : {projectPath: "../projects/evernote", gitHub: "None"},
+    "ttrpgTools" : {projectPath: "../projects/character_sheet", gitHub: "https://github.com/Vielfras/ttrpg_tools/tree/develop/digital_tools/character_sheet"},
+    "xianxiaMvp" : {projectPath: "../projects/xianxia_mvp", gitHub: "https://github.com/Vielfras/ttrpg_tools/tree/develop/digital_tools/character_sheet"},
 };
 
 let lastWindowSize;
@@ -26,7 +26,7 @@ const hamburgerVisibilityMaxWidth = 730;
 const HandleProjectPageLink = async (linkId) => {
     console.log("Link with ID", linkId, "was clicked.");
 
-    const newMainElement = await GetProjectPageMainElement(projectPaths[linkId]);
+    const newMainElement = await GetProjectPageMainElement(projects[linkId]);
     
     if (newMainElement) {
         const headerElement = document.querySelector('header');
