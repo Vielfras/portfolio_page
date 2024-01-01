@@ -15,7 +15,7 @@ const GetProjectPageMainElement = async (project) => {
                     <iframe src="${project[projectPath]}/index.html" width="100%" height="500px"></iframe>
                     <div class="project_links">
                         <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
-                        <a href="${project[gitHub]}/index.html" target="_blank" rel="noopener noreferrer"><button>GitHub</button></a>
+                        <a href="${project[gitHub]}" target="_blank" rel="noopener noreferrer"><button>GitHub</button></a>
                     </div>
                 </div>
             </section>

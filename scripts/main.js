@@ -12,7 +12,7 @@ const projects = {
     "d_commerce" : {projectPath: "../projects/d_commerce", gitHub: "None"},
     "evernote" : {projectPath: "../projects/evernote", gitHub: "None"},
     "ttrpgTools" : {projectPath: "../projects/character_sheet", gitHub: "https://github.com/Vielfras/ttrpg_tools/tree/develop/digital_tools/character_sheet"},
-    "xianxiaMvp" : {projectPath: "../projects/xianxia_mvp", gitHub: "https://github.com/Vielfras/ttrpg_tools/tree/develop/digital_tools/character_sheet"},
+    "xianxiaMvp" : {projectPath: "../projects/xianxia_mvp", gitHub: "https://github.com/EFoox/Genesis/tree/main/Xianxia_MVP"},
 };
 
 let lastWindowSize;
