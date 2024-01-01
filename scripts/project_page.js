@@ -1,4 +1,4 @@
-import { GetElementFromHTML } from "./my_utils.js"
+import { GetElementFromHTML, FetchText } from "./my_utils.js"
 
 export {
     GetProjectPageMainElement,
@@ -8,30 +8,40 @@ const projectPath = "projectPath";
 const gitHub = "gitHub";
 
 const GetProjectPageMainElement = async (project) => {
-    const iFrameHTML = project[gitHub] !== "None" ?
+    const projectLinksHTML = project[gitHub] !== "None" ?
     `
-            <section class="project_preview">
-                <div class="preview">
-                    <iframe src="${project[projectPath]}/index.html" width="100%" height="500px"></iframe>
-                    <div class="project_links">
-                        <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
-                        <a href="${project[gitHub]}" target="_blank" rel="noopener noreferrer"><button>GitHub</button></a>
-                    </div>
-                </div>
-            </section>
+        <div class="project_links">
+            <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
+            <a href="${project[gitHub]}" target="_blank" rel="noopener noreferrer"><button>GitHub</button></a>
+        </div>
     `
     :
     `
+        <div class="project_links">
+            <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
+        </div>
+    `
+    ;
+
+    const iFrameHTML = project[gitHub] !== "None" ?
+        `
             <section class="project_preview">
                 <div class="preview">
                     <iframe src="${project[projectPath]}/index.html" width="100%" height="500px"></iframe>
-                    <div class="project_links">
-                        <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
-                    </div>
+                    ${projectLinksHTML}
                 </div>
             </section>
     `
-    ;
+        :
+        `
+            <section class="project_preview">
+                <div class="preview">
+                    <iframe src="${project[projectPath]}/index.html" width="100%" height="500px"></iframe>
+                    ${projectLinksHTML}
+                </div>
+            </section>
+    `
+        ;
 
     const readmeMD = await FetchText(`${project[projectPath]}/README.md`)
     const projectDescriptionHTML = `
@@ -52,12 +62,5 @@ const GetProjectPageMainElement = async (project) => {
 
 
 
-async function FetchText(filePath) {
-    const fileContent = await fetch(filePath);
-    if (!fileContent.ok) {
-        throw new Error(`Error fetching ${filePath}: ${fileContent.status}`);
-    }
 
-    return fileContent.text();
-}
 

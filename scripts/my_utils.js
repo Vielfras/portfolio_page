@@ -5,6 +5,15 @@ export {
     GetElementFromHTML,
 };
 
+async function FetchText(filePath) {
+    const fileContent = await fetch(filePath);
+    if (!fileContent.ok) {
+        throw new Error(`Error fetching ${filePath}: ${fileContent.status}`);
+    }
+
+    return fileContent.text();
+}
+
 async function FetchJSON(filePath) {
     const response = await fetch(filePath);
     if (!response.ok) {
