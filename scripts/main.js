@@ -12,7 +12,7 @@ const projectPaths = {
     "d_commerce" :"../projects/d_commerce/index.html",
     "evernote" :"../projects/evernote/index.html",
     "ttrpgTools" :"../projects/character_sheet/index.html",
-    "xianxiaMvp" :"",
+    "xianxiaMvp" :"../projects/xianxia_mvp/index.html",
 };
 
 let lastWindowSize;
