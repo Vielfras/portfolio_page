@@ -1,6 +1,7 @@
 'use strict';
 
 export {
+    FetchText,
     FetchJSON,
     GetElementFromHTML,
 };

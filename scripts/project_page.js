@@ -8,20 +8,12 @@ const projectPath = "projectPath";
 const gitHub = "gitHub";
 
 const GetProjectPageMainElement = async (project) => {
-    const projectLinksHTML = project[gitHub] !== "None" ?
-    `
+    const projectLinksHTML = `
         <div class="project_links">
             <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
-            <a href="${project[gitHub]}" target="_blank" rel="noopener noreferrer"><button>GitHub</button></a>
+            ${(project[gitHub] !== "None") ? `<a href="${project[gitHub]}" target="_blank" rel="noopener noreferrer"><button>GitHub</button></a>` : ''}
         </div>
-    `
-    :
-    `
-        <div class="project_links">
-            <a href="${project[projectPath]}/index.html" target="_blank" rel="noopener noreferrer"><button>To Page</button></a>
-        </div>
-    `
-    ;
+    `;
 
     const iFrameHTML = project[gitHub] !== "None" ?
         `
