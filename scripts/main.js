@@ -3,16 +3,16 @@
 import {GetProjectPageMainElement} from "./project_page.js"
 import {URLManager} from "./url_manager.js"
 
-const portfolioPageUrl = "https://oksman.netlify.app";
-// const portfolioPageUrl = "http://127.0.0.1:5500/";
+// const portfolioPageUrl = "https://oksman.netlify.app";
+const portfolioPageUrl = "http://127.0.0.1:5500/";
 
 const urlManager = new URLManager();
 
 const projectPaths = {
-    "d_commerce" :"../projects/d_commerce/index.html",
-    "evernote" :"../projects/evernote/index.html",
-    "ttrpgTools" :"../projects/character_sheet/index.html",
-    "xianxiaMvp" :"../projects/xianxia_mvp/index.html",
+    "d_commerce" :"../projects/d_commerce",
+    "evernote" :"../projects/evernote",
+    "ttrpgTools" :"../projects/character_sheet",
+    "xianxiaMvp" :"../projects/xianxia_mvp",
 };
 
 let lastWindowSize;
@@ -23,10 +23,10 @@ const hamburgerVisibilityMaxWidth = 730;
 // ================================================================
 //                             LOGIC
 // ================================================================
-const HandleProjectPageLink = (linkId) => {
+const HandleProjectPageLink = async (linkId) => {
     console.log("Link with ID", linkId, "was clicked.");
 
-    const newMainElement = GetProjectPageMainElement(projectPaths[linkId]);
+    const newMainElement = await GetProjectPageMainElement(projectPaths[linkId]);
     
     if (newMainElement) {
         const headerElement = document.querySelector('header');
@@ -54,7 +54,7 @@ const HandleProjectPageLink = (linkId) => {
 // ================================================================
 //                             DOM CONTENT LOADED
 // ================================================================
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const hamburger = document.querySelector('#hamburger');
     const navMenu = document.querySelector('#nav_menu');
     const navSocial = document.querySelector('#nav_social_container');
@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll(".project_page_link").forEach((element) => {
-        element.addEventListener('click', (event) => {
-            HandleProjectPageLink(element.id);
+        element.addEventListener('click', async (event) => {
+            await HandleProjectPageLink(element.id);
         });
     });
 
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let searchParams = urlManager.GetSearchParams(); 
     if (searchParams) {
         if (searchParams["project"] && searchParams["project"].trim() !== "") {
-            HandleProjectPageLink(searchParams["project"]);
+            await HandleProjectPageLink(searchParams["project"]);
         }
     }
 });

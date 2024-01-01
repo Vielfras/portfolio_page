@@ -844,7 +844,6 @@ footer p {
 
 #project_details {
   width: 100%;
-  text-align: center;
   padding: 5vh 0 2vh;
   display: flex;
   flex-direction: column;
@@ -857,6 +856,7 @@ footer p {
   max-width: 60rem;
   padding: 5vh 5vw;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
 }
 #project_details #project_intro h1 {
   font-family: "Raleway", sans-serif;
@@ -869,6 +869,46 @@ footer p {
 #project_details #project_intro h1::first-letter {
   font-size: 3.5rem;
   text-shadow: 3px 2px 0px rgba(11, 11, 11, 0.2);
+}
+#project_details #project_intro h3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+#project_details #project_intro h4 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+  color: #777;
+}
+#project_details #project_intro ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+#project_details #project_intro ul li {
+  margin-bottom: 0.5rem;
+}
+#project_details #project_intro ul li:before {
+  content: "-";
+  color: #21a02c;
+  padding-right: 0.5rem;
+}
+#project_details #project_intro a {
+  color: #21a02c;
+  text-decoration: none;
+}
+#project_details #project_intro a:hover {
+  text-decoration: underline;
+}
+#project_details #project_intro blockquote {
+  text-align: center;
+  border-left: none;
+  padding: 0;
+  margin: 0;
+}
+#project_details #project_intro blockquote ul {
+  padding-left: 1em;
 }
 
 .hide {

@@ -4,22 +4,21 @@ export {
     GetProjectPageMainElement,
 };
 
-const GetProjectPageMainElement = (projectPath, projectDescriptionMDfilePath) => {
+const GetProjectPageMainElement = async (projectPath) => {
     const iFrameHTML = `
             <section id="project_preview">
                 <div id="preview">
-                    <iframe src="${projectPath}" width="100%" height="500px"></iframe>
-                    <a href="${projectPath}" target="_blank" rel="noopener noreferrer"><button>Go To Page</button></a>
+                    <iframe src="${projectPath}/index.html" width="100%" height="500px"></iframe>
+                    <a href="${projectPath}/index.html" target="_blank" rel="noopener noreferrer"><button>Go To Page</button></a>
                 </div>
             </section>
     `;
 
+    const readmeMD = await FetchText(`${projectPath}/README.md`)
     const projectDescriptionHTML = `
             <section id="project_details">
                 <div id="project_intro">
-                    <h1>Project Name</h1>
-                    <h4>HTML - CSS - JS</h4>
-                    <p>Describe the project here...</p>
+                    ${marked.parse(readmeMD)}
                 </div>
             </section>
     `;
@@ -32,4 +31,14 @@ const GetProjectPageMainElement = (projectPath, projectDescriptionMDfilePath) =>
         `);
 };
 
+
+
+async function FetchText(filePath) {
+    const fileContent = await fetch(filePath);
+    if (!fileContent.ok) {
+        throw new Error(`Error fetching ${filePath}: ${fileContent.status}`);
+    }
+
+    return fileContent.text();
+}
 
