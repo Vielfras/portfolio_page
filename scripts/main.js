@@ -3,8 +3,8 @@
 import {GetProjectPageMainElement} from "./project_page.js"
 import {URLManager} from "./url_manager.js"
 
-// const portfolioPageUrl = "https://oksman.netlify.app";
-const portfolioPageUrl = "http://127.0.0.1:5500/";
+const portfolioPageUrl = "https://oksman.netlify.app";
+// const portfolioPageUrl = "http://127.0.0.1:5500/";
 
 const urlManager = new URLManager();
 
