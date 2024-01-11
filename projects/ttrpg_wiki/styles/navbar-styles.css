@@ -1,0 +1,53 @@
+:root {
+    --navbar-bg-color: #2c3e50;
+    --top-folder-btn-color: #34495e;
+    --top-folder-btn-hover-color: #1abc9c;
+    --top-folder-btn-text-color: #ecf0f1;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 95%;
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+.top-folder-btn {
+    font-size: 1.05rem;
+    background-color: var(--top-folder-btn-color);
+    color: var(--top-folder-btn-text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 5px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.top-folder-btn:hover {
+    background-color: var(--top-folder-btn-hover-color);
+}
+
+/* Hide navbar when scrolling down */
+.hide-navbar {
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+
+
+/* #content {
+    padding: 20px;
+} */

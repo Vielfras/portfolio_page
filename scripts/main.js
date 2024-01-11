@@ -13,6 +13,10 @@ const projects = {
     "evernote" : {projectPath: "../projects/evernote", gitHub: "None"},
     "ttrpgTools" : {projectPath: "../projects/character_sheet", gitHub: "https://github.com/Vielfras/ttrpg_tools/tree/develop/digital_tools/character_sheet"},
     "xianxiaMvp" : {projectPath: "../projects/xianxia_mvp", gitHub: "https://github.com/EFoox/Genesis/tree/main/Xianxia_MVP"},
+
+    "tileGame" : {projectPath: "../projects/tile_game", gitHub: "None"},
+    "ttrpgWiki" : {projectPath: "../projects/ttrpg_wiki", gitHub: "None"},
+    "arrayVisualisation" : {projectPath: "../projects/array_visualisation", gitHub: "None"},
 };
 
 let lastWindowSize;

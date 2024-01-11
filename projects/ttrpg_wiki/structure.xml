@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<folders name="markdown_files">
+  <folder name="General">
+    <file name="Abilities.md"/>
+    <file name="Horror Ranks.md"/>
+    <file name="MVP.md"/>
+    <file name="Attributes.md"/>
+    
+  </folder>
+  <folder name="Skills">
+    <file name="Skills.md"/>
+    <folder name="A-Z">
+      <file name="E.md"/>
+      <file name="P.md"/>
+      <file name="S.md"/>
+      <file name="J.md"/>
+      <file name="F.md"/>
+      <file name="G.md"/>
+      <file name="A.md"/>
+      <file name="L.md"/>
+      <file name="D.md"/>
+      <file name="N.md"/>
+      <file name="U.md"/>
+      <file name="I.md"/>
+      <file name="R.md"/>
+      <file name="Z.md"/>
+      <file name="Y.md"/>
+      <file name="W.md"/>
+      <file name="H.md"/>
+      <file name="T.md"/>
+      <file name="K.md"/>
+      <file name="C.md"/>
+      <file name="V.md"/>
+      <file name="Q.md"/>
+      <file name="M.md"/>
+      <file name="B.md"/>
+      <file name="O.md"/>
+    </folder>
+  </folder>
+  <folder name="Spells">
+    <file name="Magic.md"/>
+    <folder name="Tiers">
+      <file name="1.md"/>
+      <file name="3.md"/>
+      <file name="4.md"/>
+      <file name="6.md"/>
+      <file name="5.md"/>
+      <file name="unknown.md"/>
+      <file name="7.md"/>
+      <file name="0.md"/>
+      <file name="2.md"/>
+    </folder>
+  </folder>
+  <file name="README.md"/>
+  <folder name="Classes">
+    <file name="Alchemist.md"/>
+    <folder name="A-Z">
+      <file name="E.md"/>
+      <file name="P.md"/>
+      <file name="S.md"/>
+      <file name="J.md"/>
+      <file name="F.md"/>
+      <file name="G.md"/>
+      <file name="A.md"/>
+      <file name="L.md"/>
+      <file name="D.md"/>
+      <file name="X.md"/>
+      <file name="N.md"/>
+      <file name="U.md"/>
+      <file name="I.md"/>
+      <file name="R.md"/>
+      <file name="Z.md"/>
+      <file name="Y.md"/>
+      <file name="W.md"/>
+      <file name="H.md"/>
+      <file name="T.md"/>
+      <file name="K.md"/>
+      <file name="C.md"/>
+      <file name="V.md"/>
+      <file name="Q.md"/>
+      <file name="M.md"/>
+      <file name="B.md"/>
+      <file name="O.md"/>
+    </folder>
+  </folder>
+</folders>

@@ -1,0 +1,1 @@
+[Horror Ranks](https://thewanderinginn.fandom.com/wiki/Horror_Ranks)
