@@ -1,6 +1,7 @@
 'use strict'
 
 import {GetProjectPageMainElement} from "./project_page.js"
+import {GetCertificateElement} from "./certificate_page.js"
 import {URLManager} from "./url_manager.js"
 
 const portfolioPageUrl = "https://oksman.netlify.app";
@@ -19,6 +20,10 @@ const projects = {
     "arrayVisualisation" : {projectPath: "../projects/array_visualisation", gitHub: "None"},
 };
 
+const certificates = {
+    "excellenceRafael" : {path: "../assests/certificate_of_excellence_rafael.jpg", isPDF : false, name: "certificate_of_excellence_eli_oksman"},
+};
+
 let lastWindowSize;
 let isMenuHidden;
 
@@ -28,8 +33,6 @@ const hamburgerVisibilityMaxWidth = 730;
 //                             LOGIC
 // ================================================================
 const HandleProjectPageLink = async (linkId) => {
-    console.log("Link with ID", linkId, "was clicked.");
-
     const newMainElement = await GetProjectPageMainElement(projects[linkId]);
     
     if (newMainElement) {
@@ -46,6 +49,32 @@ const HandleProjectPageLink = async (linkId) => {
 
         if (contactMeElement) {
             contactMeElement.parentNode.insertBefore(newMainElement, contactMeElement);
+        } else {
+            document.body.appendChild(newMainElement);
+        }
+        
+        window.scrollTo(0, 0);
+    }
+};
+
+const HandleCertificateLink = async (certificateName) => {
+    const newMainElement = await GetCertificateElement(certificates[certificateName]);
+    
+    if (newMainElement) {
+        const headerElement = document.querySelector('header');
+        const mainElement = document.querySelector('main');
+        const skillsElement = document.querySelector('#skills');
+        const contactMeElement = document.querySelector('#contact_me');
+        
+        if (headerElement) headerElement.remove();
+        if (mainElement) mainElement.remove();
+        if (skillsElement) skillsElement.remove();
+        
+        urlManager.SetSearchParams("certificate", certificateName);
+        
+        if (contactMeElement) {
+            contactMeElement.parentNode.insertBefore(newMainElement, contactMeElement);
+            contactMeElement.remove();
         } else {
             document.body.appendChild(newMainElement);
         }
@@ -116,7 +145,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (searchParams["project"] && searchParams["project"].trim() !== "") {
             await HandleProjectPageLink(searchParams["project"]);
         }
+        else if (searchParams["certificate"] && searchParams["certificate"].trim() !== "") {
+            await HandleCertificateLink(searchParams["certificate"]) 
+        }
     }
+
 });
 
 
